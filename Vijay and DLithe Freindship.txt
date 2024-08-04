@@ -1,0 +1,56 @@
+Vijay and Dlithe are good friends. They are friends from their childhood. Dlithe born on 08/07/1997. Vijay gives surprise Dlithe for all his birthday. This year he wants to give ornament with the following design to Dlithe. He is not good at design. You are software engineer and he contacts you to design. Kindly help him.
+
+D                                 D
+    L                           L
+        I                      I
+          T               T
+              H     H
+                 E
+               H    H
+           T              T
+         I                      I
+     L                            L
+D                                    D
+#include <stdio.h>
+#include <string.h>
+
+void printPattern(const char* input) {
+    int len = strlen(input);
+    int i, j, k;
+
+    for (i = 0; i < len; i++) {
+        // Print leading spaces
+        for (j = 0; j < i; j++) {
+            printf("  ");
+        }
+
+        // Print characters
+        for (k = i; k < len; k++) {
+            printf("%c", input[k]);
+
+            // Print additional spaces between characters
+            if (k < len - 1) {
+                printf(" ");
+            }
+        }
+
+        // Print trailing spaces
+        for (j = i; j > 0; j--) {
+            printf("  ");
+        }
+
+        printf("\n");
+    }
+}
+
+int main() {
+    char input[100];
+
+    printf("Enter a string: ");
+    fgets(input, sizeof(input), stdin);
+    input[strcspn(input, "\n")] = '\0';  // Remove trailing newline character
+
+    printPattern(input);
+
+    return 0;
+}

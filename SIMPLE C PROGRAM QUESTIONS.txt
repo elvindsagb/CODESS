@@ -1,0 +1,53 @@
+  SIMPLE C PROGRAMS
+
+1. C Program for Hello World  
+2.C program to check whether the given number is positive or negative
+3.Reverse an input number using recursion
+4.Program to find greatest of three numbers
+5.C Program to print Fibonacci series in a given range
+6.C Program to find factorial of a given number
+7.Find Prime numbers in a given range
+8.C Program to check if given number is Armstrong or not
+9.C Program to check if given number is palindrome or not
+10.C program to display palindrome numbers in a given range
+11.C Program to find out the ASCII value of a character
+12.C Program to find the size of int, float, double and char
+13.C Program to find sum of first n natural numbers
+14.C program to print integer entered by user
+15.Decision making and loop C Programs for practice
+16.C Program to check if number is odd or even
+17.C Program to check whether an alphabet is vowel or consonant
+18.C Program to check leap year
+19.C Program to generate multiplication table
+20.C Program to display characters from ‘A’ to ‘Z’ using loop
+    Number Programs
+
+  SIMPLE C PROGRAMS OF NUMBERS
+
+21.C Program to Add two integers
+22.C Program to find GCD of two numbers
+23.C Program to find LCM of two numbers
+24.C Program to check whether number is prime or not
+25.C Program to count number of digits in an integer
+26.C Program to calculate the power of a number
+
+    STRING PROGRAMS
+
+27.Program to convert string from upper case to lower case
+28.Program to convert string from lower case to upper case
+29.Sort a set of strings in ascending alphabetical order
+30.Find length of a string without using strlen()
+31.String concatenation without using strcat
+32.Reverse a String using recursion
+  
+    ARRAY PROGRAMS
+
+33.Program to sort array in ascending order
+34.Find largest element of given array
+35.C program to find sum of array elements
+36.C Program to find number of elements in an array
+    
+37.C program to find the largest of three numbers ARRAY 
+38.C program to count vowels and consonants in a String
+39.C program to swap two numbers using pointers
+40.C Program to find average of two numbers

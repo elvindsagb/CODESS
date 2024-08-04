@@ -1,0 +1,76 @@
+write a java Program to check given number is prime or not
+
+import java.util.Scanner;
+
+public class PrimeNumberChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        
+        boolean isPrime = true;
+        
+        if (number <= 1) {
+            isPrime = false;
+        } else {
+            if (number == 2 || number == 3) {
+                isPrime = true;
+            } else if (number % 2 == 0 || number % 3 == 0) {
+                isPrime = false;
+            } else {
+                int i = 5;
+                while (i * i <= number) {
+                    if (number % i == 0 || number % (i + 2) == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                    i += 6;
+                }
+            }
+        }
+        
+        if (isPrime) {
+            System.out.println(number + " is a prime number.");
+        } else {
+            System.out.println(number + " is not a prime number.");
+        }
+    }
+}
+
+
+
+Program to print 4 numbers in increasing order without using array
+
+
+import java.util.Scanner;
+
+public class FourNumberSorter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+        
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+        
+        System.out.print("Enter the third number: ");
+        int num3 = scanner.nextInt();
+        
+        System.out.print("Enter the fourth number: ");
+        int num4 = scanner.nextInt();
+        
+        int smallest = Math.min(Math.min(num1, num2), Math.min(num3, num4));
+        int largest = Math.max(Math.max(num1, num2), Math.max(num3, num4));
+        
+        int remainingSum = num1 + num2 + num3 + num4 - smallest - largest;
+        
+        int secondSmallest = Math.min(Math.min(num1, num2), Math.min(remainingSum, num4));
+        int secondLargest = Math.max(Math.max(num1, num2), Math.max(remainingSum, num4));
+        
+        int thirdSmallest = Math.min(Math.min(num1, remainingSum), Math.min(num3, num4));
+        int thirdLargest = Math.max(Math.max(num1, remainingSum), Math.max(num3, num4));
+        
+        System.out.println("Numbers in increasing order: " + smallest + ", " + secondSmallest + ", " + thirdSmallest + ", " + largest);
+    }
+}

@@ -1,0 +1,88 @@
+A left rotation operation on an array on size n shifts each of the array elements 1 unit to the left.Given an integer d rotate the array that many steps left and returns the result                                                  Example: d=2                 arr=[1,2,3,4,5]                                                                                                                                                    After 2 rotations arr'=[3,4,5,1,2].                                                                                                                                                          Function description--->Complete the rotate left function in the editor below                                                  rotate left has the following parameters                                                                                                                          returns----->int[n] the rotated array                                                                                                                                                Input format-------------->The first line contains two space seperated integers  that denote n,the number of integers,and d,the number of left rotations that to perform.The second  line contains n space -seperated integers  that describe arr[]       
+
+
+#include <stdio.h>
+
+void leftRotate(int arr[], int n, int d) {
+    int temp[d];
+    int i, j;
+
+    // Store the first d elements in a temporary array
+    for (i = 0; i < d; i++) {
+        temp[i] = arr[i];
+    }
+
+    // Shift the remaining elements to the left
+    for (i = 0, j = d; j < n; i++, j++) {
+        arr[i] = arr[j];
+    }
+
+    // Place the elements from the temporary array at the end
+    for (i = n - d, j = 0; i < n; i++, j++) {
+        arr[i] = temp[j];
+    }
+}
+
+int main() {
+    int n, d, i;
+
+    printf("Enter the number of integers (n): ");
+    scanf("%d", &n);
+
+    printf("Enter the number of left rotations (d): ");
+    scanf("%d", &d);
+
+    int arr[n];
+
+    printf("Enter the array elements: ");
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    leftRotate(arr, n, d);
+
+    printf("Rotated Array: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Enter the number of integers (n): 5
+Enter the number of left rotations (d): 2
+Enter the array elements: 1 2 3 4 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rotated Array: 3 4 5 1 2
